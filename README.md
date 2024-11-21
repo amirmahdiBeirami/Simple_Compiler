@@ -1,3 +1,5 @@
+<!-- START OF README -->
+
 # Computer Design Final Project
 
 Welcome to the **Computer Design Final Project** repository! This project is designed to help students gain hands-on experience with building a Lexer and Syntax Analyzer for a programming language defined by a custom grammar.
@@ -8,7 +10,22 @@ Welcome to the **Computer Design Final Project** repository! This project is des
 
 Below is the grammar you will be implementing:
 
-<S> => Program <VARS> <BLOCKS> end <VARS> => Var Identifier; <VARS> | Epsilon <BLOCKS> => Start <STATES> End <STATES> => <STATE> <M_STATES> <STATE> => <BLOCKS> | <IF> | <IN> | <OUT> | <ASSIGN> | <LOOP> <M_STATES> => <STATES> | Epsilon <OUT> => Print ( <EXPR> ) ; <IN> => Read ( Identifier ) ; <IF> => If ( <EXPR> <O> <EXPR> ) { <STATE> } <LOOP> => Iteration ( <EXPR> <O> <EXPR> ) { <STATE> } <ASSIGN> => Put Identifier = <EXPR> ; <O> => < | > | == <EXPR> => <EXPR> + <R> | <EXPR> - <R> | <R> <R> => Identifier | Integer
+```plaintext
+<S> => Program <VARS> <BLOCKS> end
+<VARS> => Var Identifier; <VARS> | Epsilon
+<BLOCKS> => Start <STATES> End
+<STATES> => <STATE> <M_STATES>
+<STATE> => <BLOCKS> | <IF> | <IN> | <OUT> | <ASSIGN> | <LOOP>
+<M_STATES> => <STATES> | Epsilon
+<OUT> => Print ( <EXPR> ) ;
+<IN> => Read ( Identifier ) ;
+<IF> => If ( <EXPR> <O> <EXPR> ) { <STATE> }
+<LOOP> => Iteration ( <EXPR> <O> <EXPR> ) { <STATE> }
+<ASSIGN> => Put Identifier = <EXPR> ;
+<O> => < | > | ==
+<EXPR> => <EXPR> + <R> | <EXPR> - <R> | <R>
+<R> => Identifier | Integer
+```
 
 
 You are required to implement:
@@ -47,7 +64,7 @@ You are required to implement:
    - Click the "New Pull Request" button.
    - Provide a description of your implementation and submit the pull request.
 
-## Recommended Directory Structure
+## Directory Structure
 
 ```plaintext
 .
@@ -55,21 +72,38 @@ You are required to implement:
 ├── Project/             # Directory for your implementation
 │   ├── StudentNumber/    # Your Student Number
 
-## Submission Guidelines
-Your project must be implemented in C++.
-Ensure your code is well-documented and includes comments explaining key parts of your logic.
-Include test cases in your main.cpp file to demonstrate the correctness of your Lexer and Syntax Analyzer.
-Follow the grammar strictly when implementing your Lexer and Syntax Analyzer.
-The pull request must include:
-A brief description of your implementation.
-Instructions on how to compile and run your project.
-Important Notes
-Deadline: All pull requests must be submitted before the project deadline. Late submissions will not be accepted.
-Plagiarism: Any copied or plagiarized work will result in disqualification.
-Collaboration: You are encouraged to discuss concepts with your peers, but the implementation must be your own.
-Getting Help
-If you have any questions or need assistance, feel free to:
+```
 
-Contact me at csiroid@gmail.com.
-Open an issue in this repository with your query.
-Happy coding and best of luck with your project!
+## Submission Guidelines
+
+- Your project must be implemented in **C++**.
+- Ensure your code is well-documented and includes comments explaining key parts of your logic.
+- Include test cases in your `main.cpp` file to demonstrate the correctness of your Lexer and Syntax Analyzer.
+- Follow the grammar strictly when implementing your Lexer and Syntax Analyzer.
+
+### The pull request must include:
+1. A brief description of your implementation.
+2. Instructions on how to compile and run your project.
+
+---
+
+## Important Notes
+
+- **Deadline**: All pull requests must be submitted before the project deadline. Late submissions will not be accepted.
+- **Plagiarism**: Any copied or plagiarized work will result in disqualification.
+- **Collaboration**: You are encouraged to discuss concepts with your peers, but the implementation must be your own.
+
+---
+
+## Getting Help
+
+If you have any questions or need assistance, feel free to:
+- Contact me at [csiroid@gmail.com](mailto:csiroid@gmail.com).
+- Open an issue in this repository with your query.
+
+---
+
+**Happy coding and best of luck with your project!**
+
+
+
